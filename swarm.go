@@ -304,6 +304,7 @@ func discoverSwarm(prometheusContainerID string, outputFile string, discoveryTyp
 	if err != nil {
 		logger.Error("Could not connect container ,", prometheusContainerID, ": ", err)
 	}
+	logger.Infof("Print all scrape task: ------------------------------: ", scrapeTasks)
 	writeSDConfig(scrapeTasks, outputFile)
 }
 
